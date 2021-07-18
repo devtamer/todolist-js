@@ -33,18 +33,17 @@ export default class header extends Component {
         const { classes } = this.props
 
         return (
-            <div >
-                <AppBar style={{ margin: "auto", textAlign: "center" }} position="static">
+            <div margin="auto">
+                <AppBar margin="auto" position="static">
 
                     <Toolbar style={{ margin: "auto", display: "table" }}>
+                        <div style={{}}>
+                            <a style={{ display: "table-cell", color: "#FFFF" }} href={this.state.githublink} target="__target">
+                                <Button style={{ marginLeft: "10px", fontWeight: 200, fontSize: "12px", padding: "0" }} color="inherit">Github</Button></a></div>
                         <div>
                             <Typography variant="h6" className={""}>
                                 Todo List
                             </Typography></div>
-                        <div style={{}}>
-                            <a style={{ display: "table-cell", color: "#FFFF" }} href={this.state.githublink} target="__target">
-                                <Button style={{ fontWeight: 200, fontSize: "12px", padding: "0" }} color="inherit">Github</Button></a></div>
-
                     </Toolbar>
 
                 </AppBar>
