@@ -12,7 +12,7 @@ export default class TodoItems extends React.Component {
 
         return (
             <div>
-                <ul className="theList">
+                <ul style={{ color: "#000" }} className="theList">
                     {listItems}
                 </ul>
             </div >

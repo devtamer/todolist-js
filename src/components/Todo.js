@@ -1,9 +1,18 @@
 import React from "react";
 import { CssBaseline, Button } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
+import './todoList.css'
 
 
-const useStyles = theme => ({
+const useStyles = makeStyles((theme) => ({
+    indTask: {
+
+        display: "flex", alignItems: "center", justifyContent: "center", padding: "5px 0"
+
+    },
+    liIndTask: {
+        padding: "6px 8px", lineHeight: "1.75", color: "#FFF", fontSize: "20px",
+    },
     root: {
         '& .MuiButton-root:hover': {
             backgroundColor: '#2d3571'
@@ -11,19 +20,28 @@ const useStyles = theme => ({
         },
     },
     ButtonSty: {
-        padding: "2px",
+
         backgroundColor: "#4456bb",
-        marginLeft: "5px", border: "0", borderRadius: "5px", color: "white",
+        marginLeft: "5px", border: "0", borderRadius: "5px", color: "white", maxWidth: '30px', maxHeight: '30px', minWidth: '30px', minHeight: '30px',
+        '& .MuiButton-label': {
+        },
+        '&:hover': {
+            color: "#FFF",
+            backgroundColor: "#2e9cc7"
+        }
     }
-});
-export default function (props) {
+}));
+const Todo = (props) => {
     const classes = useStyles();
     return (
-        <div style={{ display: "flex", justifyContent: "center", padding: "5px 0" }}>
+        <div className={classes.indTask}>
 
             <div>
                 <li
-                    style={{ padding: "6px 8px", lineHeight: "1.75", color: "#FFF", fontSize: "16px", textDecoration: props.todo.complete ? "line-through" : "" }}
+                    className={classes.liIndTask}
+                    style={{
+                        textDecoration: props.todo.complete ? "line-through" : ""
+                    }}
                     onClick={props.toggleComplete}>
                     {props.todo.text}</li>
 
@@ -34,3 +52,4 @@ export default function (props) {
         </div>
     )
 }
+export default Todo;

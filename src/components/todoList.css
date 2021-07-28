@@ -1,9 +1,10 @@
 .todoItem {
     list-style: decimal;
+    color: #000;
 }
 
 .filterButton {
-    color: "#FFF";
+    color: "#FFF !important";
 }
 
 .body {

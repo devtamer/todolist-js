@@ -1,13 +1,12 @@
 .App {
   text-align: center;
-  background-color: #4287f5;
   margin: 0;
   height: 100%;
 
 }
 html, body, #app, #app>div {
   height: 100%;
-  background-color: #4287f5;
+  margin: 0;
 
 }
 
@@ -39,7 +38,7 @@ html, body, #app, #app>div {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #94bcfb;
 }
 
 @keyframes App-logo-spin {
