@@ -1,5 +1,5 @@
 import React from 'react'
-import shortid from "shortid"
+import { nanoid } from 'nanoid'
 import { CssBaseline, Button, Input } from "@material-ui/core/"
 import { withStyles } from '@material-ui/core/styles';
 
@@ -43,7 +43,7 @@ class TodoForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.onSubmit({
-            id: shortid.generate(),
+            id: nanoid(),
             text: this.state.text,
             complete: false
         })
